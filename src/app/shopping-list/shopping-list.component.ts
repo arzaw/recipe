@@ -1,5 +1,6 @@
 import { isGeneratedFile } from '@angular/compiler/src/aot/util';
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from '../recipes/recipe.model';
 
 import { Ingredient } from '../shared/ingredient.model';
 
@@ -18,5 +19,7 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  addIngredient(ingredient: Ingredient){
+    this.ingredients.push(ingredient)
+  }
 }
